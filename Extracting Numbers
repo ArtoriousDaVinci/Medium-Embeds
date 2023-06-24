@@ -1,0 +1,42 @@
+# Import the datetime module
+import datetime
+
+# Define a function to calculate the age given a date of birth and a reference date
+def calculate_age(dob, ref_date):
+  return (ref_date - dob).days // 365
+
+# Define the date of the interview as a variable
+interview_date = datetime.date(2005, 6, 24)
+
+# Define the dates of birth of Tom Cruise and Matt Lauer as variables
+tom_dob = datetime.date(1962, 7, 3)
+matt_dob = datetime.date(1957, 12, 30)
+
+# Use the function to calculate the ages of Tom Cruise and Matt Lauer during the interview as variables
+tom_age = calculate_age(tom_dob, interview_date)
+matt_age = calculate_age(matt_dob, interview_date)
+
+# Define the full names and nicknames of Tom Cruise and Matt Lauer as constants
+TOM_FULL_NAME = "Thomas Cruise Mapother IV"
+MATT_FULL_NAME = "Matthew Todd Lauer"
+TOM_NICKNAME = "Tom"
+MATT_NICKNAME = "Matt"
+
+# Define the money that Tom Cruise earned from his movie War of the Worlds as a variable
+tom_earnings = 100000000
+
+# Define the number of viewers that watched the interview as a variable
+viewers = 11000000
+
+# Define the interview duration and the time it aired as variables
+interview_duration = datetime.timedelta(minutes=13, seconds=56)
+air_time = datetime.time(7, 0)
+
+# Print the numbers from the interview using f-strings, variables and constants
+print(f"The date of the interview was {interview_date:%B %d, %Y}.")
+print(f"Tom Cruise was {tom_age} years old and Matt Lauer was {matt_age} years old during the interview.")
+print(f"Tom Cruise's full name is {TOM_FULL_NAME} and his nickname is {TOM_NICKNAME}.")
+print(f"Matt Lauer's full name is {MATT_FULL_NAME} and his nickname is {MATT_NICKNAME}.")
+print(f"Tom Cruise earned ${tom_earnings:,} from his movie War of the Worlds.")
+print(f"The interview was watched by {viewers:,} viewers.")
+print(f"The interview lasted for {interview_duration} and it aired at {air_time:%I:%M %p}.")
